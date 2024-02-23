@@ -53,10 +53,10 @@ class Odom_Data_t
 {
 public:
   EIGEN_MAKE_ALIGNED_OPERATOR_NEW
-  Eigen::Vector3d p;
-  Eigen::Vector3d v;
-  Eigen::Quaterniond q;
-  Eigen::Vector3d w;
+  Eigen::Vector3d p;    // position
+  Eigen::Vector3d v;    // velocity
+  Eigen::Quaterniond q; // orientation
+  Eigen::Vector3d w;  // angular velocity
 
   nav_msgs::Odometry msg;
   ros::Time rcv_stamp;

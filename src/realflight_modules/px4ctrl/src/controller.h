@@ -16,11 +16,11 @@ struct Desired_State_t
 {
 	Eigen::Vector3d p;
 	Eigen::Vector3d v;
-	Eigen::Vector3d a;
-	Eigen::Vector3d j;
-	Eigen::Quaterniond q;
-	double yaw;
-	double yaw_rate;
+	Eigen::Vector3d a;  // Acceleration
+	Eigen::Vector3d j;  // Jerk
+	Eigen::Quaterniond q; // Orientation
+	double yaw;      // [rad]
+	double yaw_rate; // [rad/s]
 
 	Desired_State_t(){};
 

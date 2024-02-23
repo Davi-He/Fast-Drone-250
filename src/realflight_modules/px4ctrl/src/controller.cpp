@@ -17,6 +17,19 @@ LinearControl::LinearControl(Parameter_t &param) : param_(param)
 
 /* 
   compute u.thrust and u.q, controller gains and other parameters are in param_ 
+  根据期望状态、当前里程计数据和IMU数据计算无人机的控制输出。
+  它计算无人机的期望加速度、推力和姿态（方向）。
+  控制器的增益和其他参数在param_结构中定义。
+
+  参数：
+    - des: 无人机的期望状态（位置、速度、加速度和偏航角）
+    - odom: 当前里程计数据（位置、速度和方向）
+    - imu: IMU数据（方向）
+    - u: 控制器的输出结构（推力和姿态）
+
+  返回：
+    - debug_msg_: 调试消息，包含用于调试目的的期望位置、速度、加速度、姿态和推力。
+*/
 */
 quadrotor_msgs::Px4ctrlDebug
 LinearControl::calculateControl(const Desired_State_t &des,
